@@ -3,6 +3,7 @@ import string
 import sys
 
 
+# Function for generating random string of specified length and specified exit code
 if __name__ == "__main__":
     print("Generating random text:")
     if len(sys.argv) > 1:
