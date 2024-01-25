@@ -21,7 +21,7 @@ jobs:
 
     - name: Build and Push Docker Images
       run: |
-        for folder in RandomTextGenerator1 RandomTextGenerator2 RandomTextGenerator3; do
+        for folder in RandomTextGenerator RandomTextGenerator2 RandomTextGenerator3; do
           cd "$folder"
           docker build -t ${{ secrets.DOCKER_USERNAME }}/$folder:latest .
           docker tag ${{ secrets.DOCKER_USERNAME }}/$folder:latest ${{ secrets.DOCKER_USERNAME }}/$folder:${{ github.sha }}
